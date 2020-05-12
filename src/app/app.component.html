@@ -1,0 +1,12 @@
+<h2>{{title}}</h2>
+<app-contact-form></app-contact-form>
+
+<div class="row">
+  <ul class="collection with-header" id="contact-wrapper">
+    <li class="collection-header">
+      <h4>Contacts</h4>
+    </li>
+    <app-contact *ngFor="let contact of contactService.getAll()" [contact]="contact"></app-contact>
+  </ul>
+</div>
+
